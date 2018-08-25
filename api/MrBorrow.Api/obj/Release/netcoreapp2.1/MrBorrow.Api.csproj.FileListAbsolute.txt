@@ -1,0 +1,15 @@
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\bin\Release\netcoreapp2.1\MrBorrow.Api.deps.json
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\bin\Release\netcoreapp2.1\MrBorrow.Api.runtimeconfig.json
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\bin\Release\netcoreapp2.1\MrBorrow.Api.runtimeconfig.dev.json
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\bin\Release\netcoreapp2.1\MrBorrow.Api.dll
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\bin\Release\netcoreapp2.1\MrBorrow.Api.pdb
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\obj\Release\netcoreapp2.1\MrBorrow.Api.csprojAssemblyReference.cache
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\obj\Release\netcoreapp2.1\MrBorrow.Api.csproj.CoreCompileInputs.cache
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\obj\Release\netcoreapp2.1\MrBorrow.Api.RazorAssemblyInfo.cache
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\obj\Release\netcoreapp2.1\MrBorrow.Api.RazorAssemblyInfo.cs
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\obj\Release\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\obj\Release\netcoreapp2.1\MrBorrow.Api.AssemblyInfoInputs.cache
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\obj\Release\netcoreapp2.1\MrBorrow.Api.AssemblyInfo.cs
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\obj\Release\netcoreapp2.1\MrBorrow.Api.RazorTargetAssemblyInfo.cache
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\obj\Release\netcoreapp2.1\MrBorrow.Api.dll
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\obj\Release\netcoreapp2.1\MrBorrow.Api.pdb

@@ -9,3 +9,18 @@ C:\Users\Digital Thailand\source\repos\MrBorrow.Api\MrBorrow.Api\obj\Debug\netco
 C:\Users\Digital Thailand\source\repos\MrBorrow.Api\MrBorrow.Api\obj\Debug\netcoreapp2.1\MrBorrow.Api.AssemblyInfoInputs.cache
 C:\Users\Digital Thailand\source\repos\MrBorrow.Api\MrBorrow.Api\obj\Debug\netcoreapp2.1\MrBorrow.Api.AssemblyInfo.cs
 C:\Users\Digital Thailand\source\repos\MrBorrow.Api\MrBorrow.Api\obj\Debug\netcoreapp2.1\MrBorrow.Api.RazorTargetAssemblyInfo.cache
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\bin\Debug\netcoreapp2.1\MrBorrow.Api.deps.json
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\bin\Debug\netcoreapp2.1\MrBorrow.Api.runtimeconfig.json
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\bin\Debug\netcoreapp2.1\MrBorrow.Api.runtimeconfig.dev.json
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\bin\Debug\netcoreapp2.1\MrBorrow.Api.dll
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\obj\Debug\netcoreapp2.1\MrBorrow.Api.csprojAssemblyReference.cache
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\obj\Debug\netcoreapp2.1\MrBorrow.Api.csproj.CoreCompileInputs.cache
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\obj\Debug\netcoreapp2.1\MrBorrow.Api.RazorAssemblyInfo.cache
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\obj\Debug\netcoreapp2.1\MrBorrow.Api.RazorAssemblyInfo.cs
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\obj\Debug\netcoreapp2.1\MrBorrow.Api.AssemblyInfoInputs.cache
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\obj\Debug\netcoreapp2.1\MrBorrow.Api.AssemblyInfo.cs
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\obj\Debug\netcoreapp2.1\MrBorrow.Api.RazorTargetAssemblyInfo.cache
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\bin\Debug\netcoreapp2.1\MrBorrow.Api.pdb
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\obj\Debug\netcoreapp2.1\MrBorrow.Api.dll
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\obj\Debug\netcoreapp2.1\MrBorrow.Api.pdb
+D:\sirinarin\Hackathon\MRBorrow\api\MrBorrow.Api\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
