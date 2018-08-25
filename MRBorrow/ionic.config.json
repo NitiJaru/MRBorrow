@@ -1,0 +1,7 @@
+{
+  "name": "MRBorrow",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
