@@ -26,7 +26,7 @@
         ชื่อ
       </ion-col>
       <ion-col col-10>
-        <input type="text" required>
+        <input type="text" required id="name" [(ngModel)]="item.name">
       </ion-col>
     </ion-row>
     <ion-row>
@@ -34,7 +34,7 @@
         ชั้น
       </ion-col>
       <ion-col col-10>
-        <input type="text">
+        <input type="text" id="row" [(ngModel)]="item.row">
       </ion-col>
     </ion-row>
     <ion-row>
@@ -42,7 +42,7 @@
         ช่วง
       </ion-col>
       <ion-col col-10>
-        <input type="text">
+        <input type="text" id="column" [(ngModel)]="item.column">
       </ion-col>
     </ion-row>
   </ion-grid>
@@ -50,7 +50,7 @@
 
   <ion-row>
     <ion-col col-6>
-      <button ion-button full>สร้างชั้น</button>
+      <button ion-button full (click)="createdata()" >สร้าง</button>
     </ion-col>
     <ion-col col-6>
       <button ion-button full color="danger">ยกเลิก</button>
