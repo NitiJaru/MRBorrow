@@ -55,7 +55,23 @@ export class BorrowitemPage {
       let option = { "headers": { "Content-Type": "application/json" }};
       this.httpClient.post("https://mrborrowapi.azurewebsites.net/api/Slot/ConfirmBorrow/" + this.model._id + "/" + this.model.SlotId, { }, option)
       .subscribe((result: any) => {
-        this.navCtrl.push(BorrowsuccessPage);
+
+        if (result == null){
+          this.navCtrl.push(BorrowsuccessPage);
+        }
+        else{
+          let alert = this.alertCtrl.create({
+            title: 'เกิดข้อผิดพลาด',
+            buttons: [
+              {
+                text: 'ตกลง',
+                role: 'cancel',
+                handler: () => { }
+              }
+            ]
+          });
+          alert.present();
+        }
       }, error => {
         let alert = this.alertCtrl.create({
           title: 'เกิดข้อผิดพลาด',

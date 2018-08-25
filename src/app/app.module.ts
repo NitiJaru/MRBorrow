@@ -12,6 +12,7 @@ import { QrPage } from '../pages/qr/qr';
 import { BorrowitemPage } from '../pages/borrowitem/borrowitem';
 import { LoginPage } from '../pages/login/login';
 import { BorrowsuccessPage } from '../pages/borrowsuccess/borrowsuccess';
+import { GranteePage } from '../pages/grantee/grantee';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -32,7 +33,8 @@ import { UserServiceProvider } from '../providers/user-service/user-service';
     QrPage,
     BorrowitemPage,
     LoginPage,
-    BorrowsuccessPage
+    BorrowsuccessPage,
+    GranteePage
   ],
   imports: [
     HttpClientModule,
@@ -50,7 +52,8 @@ import { UserServiceProvider } from '../providers/user-service/user-service';
     QrPage,
     BorrowitemPage,
     LoginPage,
-    BorrowsuccessPage
+    BorrowsuccessPage,
+    GranteePage
   ],
   providers: [
     StatusBar,

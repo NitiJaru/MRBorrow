@@ -7,6 +7,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/timeout';
 
 import { BorrowitemPage } from '../borrowitem/borrowitem';
+import { GranteePage } from '../grantee/grantee';
 import { UserServiceProvider } from '../../providers/user-service/user-service';
 
 @IonicPage()
@@ -96,6 +97,44 @@ export class QrPage {
          alert("Error: " + err.message);
          console.log('Error', err.message);
      });
+  }
+
+  grantee(){
+    this.barcodeScanner.scan().then(barcodeData => {
+      console.log('Barcode data', barcodeData);
+
+      var qrData = barcodeData.text;
+      this.httpClient.get("https://mrborrowapi.azurewebsites.net/api/slot/GetBorrowHistoryForConsent/" + qrData)
+      .subscribe((data:any)=>{
+        this.navCtrl.push(GranteePage, data);
+      },error=>{let alert = this.alertCtrl.create({
+        title: 'เกิดข้อผิดพลาด',
+        message: error.message,
+        buttons: [
+          {
+            text: 'ตกลง',
+            role: 'cancel',
+            handler: () => { }
+          }
+        ]
+      });
+      alert.present();
+      });
+    },
+      error =>{
+        let alert = this.alertCtrl.create({
+          title: 'เกิดข้อผิดพลาด',
+          message: error.message,
+          buttons: [
+            {
+              text: 'ตกลง',
+              role: 'cancel',
+              handler: () => { }
+            }
+          ]
+        });
+        alert.present();
+      })
   }
 
 }
