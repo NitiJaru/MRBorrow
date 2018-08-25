@@ -11,6 +11,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { QrPage } from '../pages/qr/qr';
 import { BorrowitemPage } from '../pages/borrowitem/borrowitem';
 import { LoginPage } from '../pages/login/login';
+import { BorrowsuccessPage } from '../pages/borrowsuccess/borrowsuccess';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -18,6 +19,7 @@ import { CreateBlockPage } from '../pages/create-block/create-block';
 import { Camera } from '@ionic-native/camera';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { NativeStorage } from '@ionic-native/native-storage';
+import { UserServiceProvider } from '../providers/user-service/user-service';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { NativeStorage } from '@ionic-native/native-storage';
     CreateBlockPage,
     QrPage,
     BorrowitemPage,
-    LoginPage
+    LoginPage,
+    BorrowsuccessPage
   ],
   imports: [
     HttpClientModule,
@@ -46,7 +49,8 @@ import { NativeStorage } from '@ionic-native/native-storage';
     CreateBlockPage,
     QrPage,
     BorrowitemPage,
-    LoginPage
+    LoginPage,
+    BorrowsuccessPage
   ],
   providers: [
     StatusBar,
@@ -55,7 +59,8 @@ import { NativeStorage } from '@ionic-native/native-storage';
     BarcodeScanner,
     NativeStorage,
     HttpClient,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    UserServiceProvider
   ]
 })
 export class AppModule {}

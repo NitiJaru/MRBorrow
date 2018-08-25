@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { NativeStorage } from '@ionic-native/native-storage';
 
 import { TabsPage } from '../tabs/tabs';
+import { UserServiceProvider } from '../../providers/user-service/user-service';
 
 /**
  * Generated class for the LoginPage page.
@@ -18,9 +19,9 @@ import { TabsPage } from '../tabs/tabs';
 })
 export class LoginPage {
 
-  model = { name: "" };
+  model = { username: "" };
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private nativeStorage: NativeStorage) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private nativeStorage: NativeStorage, private userSvc: UserServiceProvider) {
   }
 
   ionViewDidLoad() {
@@ -28,19 +29,7 @@ export class LoginPage {
   }
 
   loginForm(){
-
-    this.nativeStorage.setItem('username', this.model.name)
-    .then(
-      () => console.log('Stored item!'),
-      error => console.error('Error storing item', error)
-    );
-
-    // this.nativeStorage.getItem('username')
-    // .then(
-    //   data => alert(data),
-    //   error => console.error(error)
-    // );
-
+    this.userSvc.Username = this.model.username
     this.navCtrl.setRoot(TabsPage);
   }
 

@@ -1,13 +1,7 @@
-<!--
-  Generated template for the BorrowitemPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Borrow Item</ion-title>
+    <ion-title>ยืนยันการยืมของ</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,7 +9,16 @@
 
 <ion-content padding>
 
-  <label>{{ message }}</label>
-  <ion-img width="80" height="80" [src]="qr" ></ion-img>
+  <!-- <label>ชั้น: {{ model.row }} - {{ model.column }}</label> -->
+  <!-- <div *ngFor="let item of model.items">
+    <label>ชื่อของ: {{ item.name }}</label>
+  </div> -->
+
+  <h3>Scan QR สำหรับคนค้ำประกันการยืมของ</h3>
+  <ion-img width="200" height="200" [src]="qr" ></ion-img>
+  <p>จะกดยืนยันได้ ต้องมีคนค้ำประกันการยืมของให้เท่านั้น</p>
+
+  <button ion-button color="danger" (click)="cancel()">ยกเลิก</button>
+  <button ion-button (click)="submit()">ยืนยัน</button>
 
 </ion-content>

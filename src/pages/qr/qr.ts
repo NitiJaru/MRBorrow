@@ -7,6 +7,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/timeout';
 
 import { BorrowitemPage } from '../borrowitem/borrowitem';
+import { UserServiceProvider } from '../../providers/user-service/user-service';
 
 @IonicPage()
 @Component({
@@ -15,7 +16,12 @@ import { BorrowitemPage } from '../borrowitem/borrowitem';
 })
 export class QrPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController, private barcodeScanner: BarcodeScanner, private httpClient: HttpClient) {
+  constructor(public navCtrl: NavController,
+     public navParams: NavParams,
+     private alertCtrl: AlertController,
+     private barcodeScanner: BarcodeScanner,
+     private httpClient: HttpClient,
+     private userSvc: UserServiceProvider) {
   }
 
   brrowitem(){
@@ -26,7 +32,7 @@ export class QrPage {
       this.httpClient.get("https://mrborrowapi.azurewebsites.net/api/slot/getslotforborrow/" + qrData)
       .subscribe((data:any)=>{
         
-        let message = "ขั้น " + data.row + "-" + data.column;
+        let message = "ชั้น " + data.row + "-" + data.column;
         let alert = this.alertCtrl.create({
           title: 'ยืนยันการยืม',
           message: message,
@@ -41,14 +47,13 @@ export class QrPage {
               handler: () => { 
                 
                 let option = { "headers": { "Content-Type": "application/json" }};
-
-                // Hack: Mock username
-                let usernameBorrow = "Earn";
-                this.httpClient.post("https://mrborrowapi.azurewebsites.net/api/slot/confirmborrowhistory", { slotId: data._id, borrower: usernameBorrow  }, option)
-                .subscribe((postdata:any)=>{
-                  this.navCtrl.push(BorrowitemPage, postdata.id)
-                },
-                error=>{
+                this.httpClient.post("https://mrborrowapi.azurewebsites.net/api/Slot/ConfirmBorrowHistory", 
+                {
+                  "slotId": data._id,
+                  "borrower": this.userSvc.Username,
+                }, option).subscribe((result: any) => {
+                  this.navCtrl.push(BorrowitemPage, result._id)
+                }, error => {
                   let alert = this.alertCtrl.create({
                     title: 'เกิดข้อผิดพลาด',
                     message: error.message,
@@ -61,7 +66,7 @@ export class QrPage {
                     ]
                   });
                   alert.present();
-                })
+                });
 
                }
             }
@@ -70,11 +75,11 @@ export class QrPage {
         alert.present();
 
       },
-      (error: string) =>{
+      error =>{
 
         let alert = this.alertCtrl.create({
           title: 'เกิดข้อผิดพลาด',
-          message: error,
+          message: error.message,
           buttons: [
             {
               text: 'ตกลง',
