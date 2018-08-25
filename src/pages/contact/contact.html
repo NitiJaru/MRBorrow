@@ -1,17 +1,31 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Contact
-    </ion-title>
+    <ion-grid>
+      <ion-row>
+        <ion-title>Store</ion-title>
+        <ion-col>
+        </ion-col>
+        <ion-buttons right>
+          <button ion-button (click)="Goblock()">
+            <img src="../../assets/imgs/add.png" style="width: 30px" />
+          </button>
+        </ion-buttons>
+      </ion-row>
+    </ion-grid>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+    <ion-list> 
+        <ion-item>
+            <ion-row>
+                <ion-col col-6>
+                  <ion-icon name="ionic" left>{{ data.name  }}</ion-icon>
+                </ion-col>
+                <ion-col col-6 right>
+                  <label>ชั้น 2 ช่อง 1</label>
+                </ion-col>
+              </ion-row>
+        </ion-item>     
+      </ion-list>
 </ion-content>

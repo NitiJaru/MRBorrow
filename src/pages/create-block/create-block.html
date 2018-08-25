@@ -14,30 +14,46 @@
 
 
 <ion-content padding>
-  <label center>สร้างชั้น</label>
+
+  <div text-center>
+    <label text-align: center>เพิ่ม Item</label>
+  </div>
+
 
   <ion-grid>
     <ion-row>
-      <ion-col>
-        ชั้น
+      <ion-col col-2>
+        ชื่อ
       </ion-col>
-      <ion-col>
-        <input type="text">
+      <ion-col col-10>
+        <input type="text" required>
       </ion-col>
-      
     </ion-row>
     <ion-row>
-
-      <ion-col>
+      <ion-col col-2>
+        ชั้น
+      </ion-col>
+      <ion-col col-10>
+        <input type="text">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-2>
         ช่วง
       </ion-col>
-      <ion-col>
-          <input type="text">
-        </ion-col>
-
+      <ion-col col-10>
+        <input type="text">
+      </ion-col>
     </ion-row>
   </ion-grid>
 
-  <button>สร้างชั้น</button>
-  <button>ยกเลิก</button>
+
+  <ion-row>
+    <ion-col col-6>
+      <button ion-button full>สร้างชั้น</button>
+    </ion-col>
+    <ion-col col-6>
+      <button ion-button full color="danger">ยกเลิก</button>
+    </ion-col>
+  </ion-row>
 </ion-content>
