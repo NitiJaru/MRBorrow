@@ -1,0 +1,11 @@
+C:\Users\Digital Thailand\source\repos\MrBorrow.Api\MrBorrow.Api\bin\Debug\netcoreapp2.1\MrBorrow.Api.deps.json
+C:\Users\Digital Thailand\source\repos\MrBorrow.Api\MrBorrow.Api\bin\Debug\netcoreapp2.1\MrBorrow.Api.runtimeconfig.json
+C:\Users\Digital Thailand\source\repos\MrBorrow.Api\MrBorrow.Api\bin\Debug\netcoreapp2.1\MrBorrow.Api.runtimeconfig.dev.json
+C:\Users\Digital Thailand\source\repos\MrBorrow.Api\MrBorrow.Api\bin\Debug\netcoreapp2.1\MrBorrow.Api.dll
+C:\Users\Digital Thailand\source\repos\MrBorrow.Api\MrBorrow.Api\obj\Debug\netcoreapp2.1\MrBorrow.Api.csprojAssemblyReference.cache
+C:\Users\Digital Thailand\source\repos\MrBorrow.Api\MrBorrow.Api\obj\Debug\netcoreapp2.1\MrBorrow.Api.csproj.CoreCompileInputs.cache
+C:\Users\Digital Thailand\source\repos\MrBorrow.Api\MrBorrow.Api\obj\Debug\netcoreapp2.1\MrBorrow.Api.RazorAssemblyInfo.cache
+C:\Users\Digital Thailand\source\repos\MrBorrow.Api\MrBorrow.Api\obj\Debug\netcoreapp2.1\MrBorrow.Api.RazorAssemblyInfo.cs
+C:\Users\Digital Thailand\source\repos\MrBorrow.Api\MrBorrow.Api\obj\Debug\netcoreapp2.1\MrBorrow.Api.AssemblyInfoInputs.cache
+C:\Users\Digital Thailand\source\repos\MrBorrow.Api\MrBorrow.Api\obj\Debug\netcoreapp2.1\MrBorrow.Api.AssemblyInfo.cs
+C:\Users\Digital Thailand\source\repos\MrBorrow.Api\MrBorrow.Api\obj\Debug\netcoreapp2.1\MrBorrow.Api.RazorTargetAssemblyInfo.cache
