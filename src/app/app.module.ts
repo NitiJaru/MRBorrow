@@ -7,10 +7,14 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { QrPage } from '../pages/qr/qr';
+import { BorrowitemPage } from '../pages/borrowitem/borrowitem';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { CreateBlockPage } from '../pages/create-block/create-block';
+import { Camera } from '@ionic-native/camera';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,9 @@ import { CreateBlockPage } from '../pages/create-block/create-block';
     ContactPage,
     HomePage,
     TabsPage,
-    CreateBlockPage
+    CreateBlockPage,
+    QrPage,
+    BorrowitemPage
   ],
   imports: [
     BrowserModule,
@@ -32,11 +38,15 @@ import { CreateBlockPage } from '../pages/create-block/create-block';
     ContactPage,
     HomePage,
     TabsPage,
-    CreateBlockPage
+    CreateBlockPage,
+    QrPage,
+    BorrowitemPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Camera,
+    BarcodeScanner,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
