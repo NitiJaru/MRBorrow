@@ -43,7 +43,7 @@ namespace MrBorrow.Api.Controllers
 
       var items = new List<Item>();
       item._id = Guid.NewGuid().ToString();
-      
+
       items.Add(item);
 
       if (slot != null)
@@ -101,7 +101,8 @@ namespace MrBorrow.Api.Controllers
       var slot = SlotCollection.Find(x => x._id == slotid).FirstOrDefault();
       if (slot.BorrowDate != null)
       {
-        throw new Exception("Someone borrowed this slot");
+        //throw new Exception("Someone borrowed this slot");
+        return null;
       }
       return slot;
     }
@@ -145,11 +146,11 @@ namespace MrBorrow.Api.Controllers
     }
 
     // POST api/values
-    [Route("ConfirmBorrow")]
+    [Route("ConfirmBorrow/{borrowid}/{slotid}")]
     [HttpPost]
-    public async void ConfirmBorrow([FromBody] BorrowHistory borrowHistory)
+    public async Task<object> ConfirmBorrow(string borrowid, string slotid)
     {
-      var borrow = BorrowHistoryCollection.Find(x => x._id == borrowHistory._id).FirstOrDefault();
+      var borrow = BorrowHistoryCollection.Find(x => x._id == borrowid).FirstOrDefault();
 
       if (!string.IsNullOrEmpty(borrow.Guarantor))
       {
@@ -157,19 +158,20 @@ namespace MrBorrow.Api.Controllers
             .Set(it => it.BorrowDate, DateTime.UtcNow)
             ;
 
-        await BorrowHistoryCollection.UpdateOneAsync(it => it._id == borrowHistory._id, update);
+        await BorrowHistoryCollection.UpdateOneAsync(it => it._id == borrowid, update);
 
 
         var update2 = Builders<Slot>.Update
       .Set(it => it.BorrowDate, DateTime.UtcNow)
       ;
 
-        await SlotCollection.UpdateOneAsync(it => it._id == borrowHistory.SlotId, update2);
+        await SlotCollection.UpdateOneAsync(it => it._id == slotid, update2);
 
+        return null;
       }
       else
       {
-        throw new Exception("No one consent this borrow");
+        return new Exception("No one consent this borrow");
       }
     }
 
@@ -182,7 +184,7 @@ namespace MrBorrow.Api.Controllers
       {
         throw new Exception("this slot still available");
       }
-      if (username != borrow.Borrower || username != borrow.Guarantor)
+      if (username != borrow.Borrower && username != borrow.Guarantor)
       {
         throw new Exception("not allow to return");
       }
@@ -202,11 +204,11 @@ namespace MrBorrow.Api.Controllers
     }
 
     // POST api/values
-    [Route("ConfirmReturn")]
+    [Route("ConfirmReturn/{borrowid}/{slotid}")]
     [HttpPost]
-    public async void ConfirmReturn([FromBody] BorrowHistory borrowHistory)
+    public async void ConfirmReturn(string borrowid, string slotid)
     {
-      var borrow = BorrowHistoryCollection.Find(x => x._id == borrowHistory._id).FirstOrDefault();
+      var borrow = BorrowHistoryCollection.Find(x => x._id == borrowid).FirstOrDefault();
 
       if (!string.IsNullOrEmpty(borrow.Approver))
       {
@@ -214,14 +216,14 @@ namespace MrBorrow.Api.Controllers
             .Set(it => it.ReturnDate, DateTime.UtcNow)
             ;
 
-        await BorrowHistoryCollection.UpdateOneAsync(it => it._id == borrowHistory._id, update);
+        await BorrowHistoryCollection.UpdateOneAsync(it => it._id == borrowid, update);
 
 
         var update2 = Builders<Slot>.Update
       .Set(it => it.BorrowDate, null)
       ;
 
-        await SlotCollection.UpdateOneAsync(it => it._id == borrowHistory.SlotId, update2);
+        await SlotCollection.UpdateOneAsync(it => it._id == slotid, update2);
 
       }
       else
