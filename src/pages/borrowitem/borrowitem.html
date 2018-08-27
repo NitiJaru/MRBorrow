@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>ยืนยันการยืมของ</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <!-- <label>ชั้น: {{ model.row }} - {{ model.column }}</label> -->
+  <!-- <div *ngFor="let item of model.items">
+    <label>ชื่อของ: {{ item.name }}</label>
+  </div> -->
+
+  <h3>Scan QR สำหรับคนค้ำประกันการยืมของ</h3>
+  <ion-img width="200" height="200" [src]="qr" ></ion-img>
+  <p>จะกดยืนยันได้ ต้องมีคนค้ำประกันการยืมของให้เท่านั้น</p>
+
+  <button ion-button color="danger" (click)="cancel()">ยกเลิก</button>
+  <button ion-button (click)="submit()">ยืนยัน</button>
+
+</ion-content>
